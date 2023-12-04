@@ -1,0 +1,20 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: 'car-service'
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: 'org.hibernate.dialect.PostgreSQLDialect'
+  datasource:
+    url: 'jdbc:postgresql://localhost:54321/mydatabase'
+    username: 'myuser'
+    password: 'secret'
+    driver-class-name: org.postgresql.Driver
+okta:
+  oauth2:
+    issuer: ${OKTA_OAUTH2_ISSUER}
+    audience: ${OKTA_OAUTH2_AUDIENCE}
